@@ -6,7 +6,6 @@ const baseUrl = `https://api.darksky.net/forecast/${darksky}/`;
 
 
 router.get('/weather', (request, response) => {
-  //console.log(request);
   const url = `${baseUrl}37.8267,-122.4233`;
   axios.get(url)
     .then(weather => {
