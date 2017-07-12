@@ -11,9 +11,10 @@ const cors = require('cors')
 //routers
 const weatherRouter = require('./routers/weather.router');
 
+server.use(cors());
 server.use(logger);
 server.use(weatherRouter);
-server.use(cors());
+
 
 //dummy route
 server.get('/', (req, res) => {
