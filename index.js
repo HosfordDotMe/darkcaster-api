@@ -13,7 +13,7 @@ const weatherRouter = require('./routers/weather.router');
 
 server.use(logger);
 server.use(weatherRouter);
-server.use(cors);
+server.use(cors());
 
 //dummy route
 server.get('/', (req, res) => {
